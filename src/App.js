@@ -28,13 +28,17 @@ function App() {
 
             <Route path='/fashion' element={<Fashion />} >
 
+                <Route index element={<Kids />} />
+                <Route path='kids' element={<Kids />} />
+
                 <Route path='mens' element={<Mens />} >
+                    <Route index element={<Small />} />
                     <Route path='small' element={<Small />} />
                     <Route path='medium' element={<Medium />} />
                 </Route>  
 
                 <Route path='womens' element={<Womens />} />
-                <Route path='kids' element={<Kids />} />
+                
             </Route>
 
             <Route path='*' element={<Error/ >} />
